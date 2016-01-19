@@ -43,6 +43,7 @@ with open('encap.txt', encoding='utf-8') as encap_file:
             octet_list = network.split('.')
             slash_loc = network.find('/')
 
+            # Add '.0's to subnet entries so they can be parsed by ipaddress module
             if ( len(octet_list) == 3 ):
                 real_network = network[0:slash_loc] + ".0" + network[slash_loc:]
             elif ( len(octet_list) == 2 ):
