@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+'''
+This script reads in the AMPRNet DNS zone file (ampr.org) and
+an encap file (encap.txt) and determines whether there is a
+gateway assocated with each AMPRnet (44.0.0.0/8) A record in
+the zone file.
+'''
+
 import ipaddress
 
 subnets={}
